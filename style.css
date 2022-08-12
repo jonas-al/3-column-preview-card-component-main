@@ -1,0 +1,137 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+
+    --fontLow: 'Lexend Deca', sans-serif;
+    --fontHigh: 'Big Shoulders Display', cursive;
+}
+
+
+body{
+    height: 100vh;
+    display: flex;
+    background-color: var(--veryLightGray);
+    padding: 0 30px;
+}
+
+
+main{
+    margin: auto;
+    display: flex;
+    width: 1000px;
+    height: 575px;
+}
+
+main h1{
+    font-family: var(--fontHigh);
+    text-transform: uppercase;
+    font-size: 2em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+main p{
+    font-family: var(--fontLow);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--transparentWhite);
+    line-height: 30px;
+    max-width: 200px;
+    min-width: 165px;
+    max-height: 150px;
+    margin-bottom: 150px;
+}
+
+img{
+    margin-bottom: 30px;
+}
+
+button{
+    background-color: white;
+    border: 2px solid white;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    font-family: var(--fontLow);
+    font-size: .9em;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+
+.sedans, .suvs, .luxury{
+    width: 33.33%;
+    padding: 50px;
+}
+
+.sedans{
+    background-color: var(--brightOrange);
+    border-radius: 10px 0 0 10px;
+}
+
+.button-sedans{
+    color: var(--brightOrange);
+}
+
+.suvs{
+    background-color: var(--darkCyan);
+}
+
+.button-suvs{
+    color: var(--darkCyan);
+}
+
+.luxury{
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.button-luxury{
+    color: var(--veryDarkCyan);
+    
+}
+
+@media (max-width: 850px){
+    main{
+        width: 375px;
+        min-width: 275px;
+        height: 1400px;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    main p{
+        min-width: 225px;
+        margin-bottom: 25px;
+    }
+
+    .sedans, .suvs, .luxury{
+        width: 100%;
+        height: 33.33%;
+    }
+
+    .sedans{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury{
+        border-radius: 0 0 10px 10px;
+    }
+
+    
+}
